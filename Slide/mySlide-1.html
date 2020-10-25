@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      * {margin:0; padding: 0; box-sizing: border-box;}
+      #slide { width: 100%; height: 100vh;}
+      .slide_wrap { width: 100%; height: 640px; }
+      #slide_1,  #slide_2,  #slide_3,#slide_4 { width: 100%; height: 100%;}
+      #slide_1 { background: url(img/dog-1.jpg) no-repeat center center; background-size: cover; }
+      #slide_2 { background: url(img/dog-2.jpg) no-repeat center center; background-size: cover;  display: none; }
+      #slide_3 { background: url(img/dog-3.jpg) no-repeat center center; background-size: cover;  display: none;}
+      #slide_4 { background: url(img/dog-4.jpg) no-repeat center center; background-size: cover;  display: none;}
+
+      #slide_button { width:100px; height: 40px; display: flex; justify-content: space-between; align-items: center; margin: 0 auto;}
+      #slide_button li { width: 10px; height: 10px; background: lightgray; border-radius: 5px; list-style: none;}
+      #slide_button li:first-child {background:gray; }
+ 
+
+   </style>
+</head>
+<body>
+   
+   <section id="slide">
+      <div class="slide_wrap">
+         <div id="slide_1"></div>
+         <div id="slide_2"></div>
+         <div id="slide_3"></div>
+         <div id="slide_4"></div>
+         <ul id="slide_button">
+            <li id="slide_button_1" onclick="slideChange1()"></li>
+            <li id="slide_button_2" onclick="slideChange2()"></li>
+            <li id="slide_button_3" onclick="slideChange3()"></li>
+            <li id="slide_button_4" onclick="slideChange4()"></li>
+         </ul>
+      </div>
+   </section>
+
+   <script>
+
+      function slideChange1() { 
+
+         document.getElementById("slide_1").style="display:block; "
+         document.getElementById("slide_button_1").style="background:gray; "
+
+         document.getElementById("slide_2").style="display:none; "
+         document.getElementById("slide_3").style="display:none; "
+         document.getElementById("slide_4").style="display:none; "
+
+         document.getElementById("slide_button_2").style="background:lightgray; "
+         document.getElementById("slide_button_3").style="background:lightgray; "
+         document.getElementById("slide_button_4").style="background:lightgray; "
+      }
+
+      function slideChange2() { 
+
+         document.getElementById("slide_2").style="display:block; "
+         document.getElementById("slide_button_2").style="background:gray; "
+
+         document.getElementById("slide_1").style="display:none; "
+         document.getElementById("slide_3").style="display:none; "
+         document.getElementById("slide_4").style="display:none; "
+
+         document.getElementById("slide_button_1").style="background:lightgray; "
+         document.getElementById("slide_button_3").style="background:lightgray; "
+         document.getElementById("slide_button_4").style="background:lightgray; "
+      }
+
+      function slideChange3() { 
+         document.getElementById("slide_3").style="display:block; "
+         document.getElementById("slide_button_3").style="background:gray; "
+
+         document.getElementById("slide_1").style="display:none; "
+         document.getElementById("slide_2").style="display:none; "
+         document.getElementById("slide_4").style="display:none; "
+
+         document.getElementById("slide_button_1").style="background:lightgray; "
+         document.getElementById("slide_button_2").style="background:lightgray; "
+         document.getElementById("slide_button_4").style="background:lightgray; "
+      }
+
+      function slideChange4() { 
+         document.getElementById("slide_4").style="display:block; "
+         document.getElementById("slide_button_4").style="background:gray; "
+
+         document.getElementById("slide_1").style="display:none; "
+         document.getElementById("slide_2").style="display:none; "
+         document.getElementById("slide_3").style="display:none; "
+
+         document.getElementById("slide_button_1").style="background:lightgray; "
+         document.getElementById("slide_button_2").style="background:lightgray; "
+         document.getElementById("slide_button_3").style="background:lightgray; "
+      }
+
+   </script>
+
+</body>
+</html>
